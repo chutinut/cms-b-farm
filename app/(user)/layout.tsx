@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import Header from '@user/components/Header';
+import Footer from "@user/components/Footer";
 
 import { Kanit, Mitr, Prompt } from 'next/font/google';
 
@@ -11,10 +12,10 @@ export const metadata: Metadata = { title: "Create Next App", description: "Gene
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en" className={`${kanit.className} ${mitr.className} ${prompt.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <>
+        <Header />
         {children}
-      </body>
-    </html>
+        <Footer />
+    </>
   );
 }

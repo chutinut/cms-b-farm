@@ -11,13 +11,11 @@ export default function Header() {
 
     return (
         <header className="w-full h-16 px-4 py-2 flex items-center justify-between bg-gradient relative">
-
             {/* Logo */}
             <div className="flex gap-2 items-center">
                 <Image src="/logo.png" alt="Logo" width={44} height={44} />
                 <span className="text-2xl font-bold text-green-main">B-Farm</span>
             </div>
-
             {/* Desktop Menu */}
             <nav className="hidden md:block">
                 <ul className="flex gap-6">
@@ -28,14 +26,12 @@ export default function Header() {
                     <li><Link className="menu-link menu-button" href={registrationFormUrl} target="_blank">ลงทะเบียน</Link></li>
                 </ul>
             </nav>
-
             {/* Hamburger Button */}
             <button className="md:hidden flex flex-col gap-1" onClick={() => setIsOpen(!isOpen)}>
                 <span className="w-6 h-0.5 bg-white-main"></span>
                 <span className="w-6 h-0.5 bg-white-main"></span>
                 <span className="w-6 h-0.5 bg-white-main"></span>
             </button>
-
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="absolute top-16 left-0 w-full bg-green-main text-white md:hidden">

@@ -61,11 +61,11 @@ export default function Home() {
             />
           </div>
           <div className="detail-content md:max-w-2xl">
-            <h2 className="text-title flex-1 text-5xl font-semibold">
+            <h2 className="text-green-accent flex-1 text-5xl font-semibold">
               เกี่ยวกับ B-Farm
             </h2>
             <br />
-            <p className="text-description text-xl">
+            <p className="text-green-accent-dark text-xl">
               B-Farm เป็นโปรแกรมที่ใช้ การเขียนโค้ดแบบบล็อก (Block-based
               Programming)
               เพื่อช่วยให้การควบคุมและจัดการฟาร์มอัตโนมัติเป็นเรื่องง่ายและสะดวกสำหรับผู้ใช้งานทุกระดับ
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <div className="detail-container">
           <div className="detail-content">
-            <p className="text-description text-xl w-full">
+            <p className="text-green-accent-dark text-xl w-full">
               ในยุคดิจิทัลที่เทคโนโลยีมีบทบาทสำคัญในชีวิตประจำวัน
               การเขียนโปรแกรมไม่เพียงแต่เป็นทักษะที่จำเป็นในวงการไอทีเท่านั้น
               แต่ยังช่วยพัฒนาทักษะการคิดเชิงตรรกะและการแก้ปัญหา
@@ -90,7 +90,7 @@ export default function Home() {
         </div>
         <div className="detail-container">
           <div className="detail-content">
-            <p className="text-description text-xl w-full">
+            <p className="text-green-accent-dark text-xl w-full">
               B-Farm
               คือเครื่องมือที่ทรงพลังสำหรับการเรียนรู้การเขียนโปรแกรมควบคุมบอร์ด
               HandySense รุ่น Pro อย่างง่ายดายและสะดวกมากยิ่งขึ้น
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
         <div className="detail-container">
           <div className="detail-content">
-            <p className="text-description text-xl w-full">
+            <p className="text-green-accent-dark text-xl w-full">
               B-Farm
               ไม่เพียงแต่ช่วยให้การเรียนรู้การเขียนโปรแกรมเป็นมิตรและไม่ซับซ้อน
               แต่ยังสนับสนุนการพัฒนาไอเดียและแก้ปัญหาด้วยวิธีที่สร้างสรรค์
@@ -124,34 +124,11 @@ export default function Home() {
             />
           </div>
           <div className="detail-content md:max-w-2xl">
-            <h2 className="text-title flex-1 text-5xl font-semibold">
+            <h2 className="text-green-accent flex-1 text-5xl font-semibold">
               การต่อบล๊อคที่ที่สามารถออกแบบได้ด้วยตัวเอง
             </h2>
             <br />
-            <p className="text-description text-xl">
-              B-Farm เป็นโปรแกรมสำเร็จรูป (Portable) ที่สามารถติดตั้งลงระบบ
-              Windows ใช้เป็นเครื่องมือพัฒนาระบบเกษตรอัจฉริยะในรูปแบบของ Block
-              Code ช่วยให้การเขียนโค้ดโปรแกรมทำได้ง่ายเหมือนการต่อจิ๊กซอว์
-              เพียงแค่ลาก Block Code ให้ถูกตามรูปแบบที่กำหนด
-              และเลือกให้สอดคล้องกับอุปกรณ์ที่ใช้งาน
-              ก็จะสามารถเชื่อมต่อคำสั่งไปยังบอร์ด HandySense
-              และเซนเซอร์ทางด้านเกษตรอัจฉริยะได้
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        ref={ref}
-        id="feature-section"
-        className={`bg-green-primary-dark w-full flex flex-col items-center p-20 scroll-mt-5 transition-all duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-      >
-        <div className="detail-container">
-          <div className="detail-content text-center">
-            <h2 className="text-title-white flex-1 text-5xl font-semibold">
-              จุดเด่นของ B-Farm
-            </h2>
-            <br />
-            <p className="text-description text-xl">
+            <p className="text-green-accent-dark text-xl">
               B-Farm เป็นโปรแกรมสำเร็จรูป (Portable) ที่สามารถติดตั้งลงระบบ
               Windows ใช้เป็นเครื่องมือพัฒนาระบบเกษตรอัจฉริยะในรูปแบบของ Block
               Code ช่วยให้การเขียนโค้ดโปรแกรมทำได้ง่ายเหมือนการต่อจิ๊กซอว์

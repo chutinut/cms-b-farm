@@ -39,7 +39,7 @@ export default function Home() {
         </h3>
         <button
           onClick={scrollToAbout}
-          className="px-5 py-2.5 bg-green-primary-light text-white-primary rounded-lg shadow-lg hover:scale-110 transition"
+          className="px-5 py-2.5 bg-green-primary-light text-white-primary rounded-lg shadow-lg hover:scale-110 transition cursor-pointer"
         >
           เรียนรู้เกี่ยวกับ B-Farm
         </button>
@@ -255,7 +255,7 @@ export default function Home() {
               alt=""
               width={350}
               height={350}
-              className="detail-image shadow-none"
+              className="detail-image shadow-none hover-scale-130"
             />
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function Home() {
             <h2 className="text-green-accent text-5xl font-bold">
               ตัวอย่างการประยุกต์ใช้งาน
               <br />
-              B-Farm พัฒนาระบบฟาร์มอัจฉริยะต่าง ๆ อาทิเช่น
+              B-Farm พัฒนาระบบฟาร์มอัจฉริยะต่างๆ
             </h2>
             <br />
             <p className="text-green-accent-dark text-xl">
@@ -382,7 +382,7 @@ export default function Home() {
               alt=""
               width={350}
               height={400}
-              className="detail-image shadow-none"
+              className="detail-image"
             />
           </div>
         </div>

@@ -5,10 +5,10 @@ import { FaPhone, FaEarthAsia, FaFacebookF } from "react-icons/fa6";
 export default function Footer() {
   const nectecUrl = "https://www.nectec.or.th/";
   return (
-    <footer className="w-full px-12 py-5 flex flex-col items-center justify-center bg-green-primary-dark text-white-main">
+    <footer className="w-full px-12 py-8 flex flex-col items-center justify-center bg-green-primary-dark text-white-main">
       <div className="w-full flex flex-col md:flex-row justify-between gap-10 md:gap-6">
         {/* LOGOS */}
-        <div className="flex flex-col md:flex-row flex-wrap md:min-w-2/6 items-center md:items-start gap-5">
+        <div className="flex flex-col md:flex-row flex-wrap items-center md:items-start gap-5">
           <Image
             src="/logo-w-text.png"
             alt="Logo"

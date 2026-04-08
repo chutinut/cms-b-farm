@@ -6,6 +6,8 @@
 
   --white-primary: #f7f7f7;
 
+  --black-primary: #333333;
+
   --green-primary: #1c9754;
   --green-primary-dark: #195c37;
   --green-primary-light: #709f7c;
@@ -50,8 +52,16 @@
   color: var(--white-primary);
 }
 
+.text-black-primary {
+  color: var(--black-primary);
+}
+
 .text-green-primary {
   color: var(--green-primary);
+}
+
+.text-green-primary-dark {
+  color: var(--green-primary-dark);
 }
 
 .text-green-accent {
@@ -64,6 +74,10 @@
 
 .text-gray-primary {
   color: var(--gray-primary);
+}
+
+.text-gray-primary-light {
+  color: var(--gray-primary-light);
 }
 
 .menu-link {
@@ -105,6 +119,18 @@
     .detail-image {
       @apply w-auto h-auto min-w-80 max-w-full rounded-xl transition-all duration-500 ease-out hover:scale-105 hover:-rotate-3;
       box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+      &.shadow-none {
+        @apply shadow-none hover:scale-150;
+      }
+    }
+
+    .cards {
+      @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8;
+      .card {
+        @apply rounded-2xl shadow-md p-6 text-center 
+        hover:-translate-y-2 hover:shadow-xl 
+        transition-all duration-300;
+      }
     }
   }
 }

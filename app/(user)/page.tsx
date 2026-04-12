@@ -51,7 +51,7 @@ export default function Home() {
         id="about-section"
         className={sectionClass(aboutVisible)}
       >
-        <div className="detail-container">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-about-1.png"
@@ -61,7 +61,7 @@ export default function Home() {
               className="detail-image"
             />
           </div>
-          <div className="detail-content md:max-w-2xl">
+          <div className="detail-content flex-1 md:max-w-2xl">
             <h2 className="text-green-accent text-5xl font-bold">
               เกี่ยวกับ B-Farm
             </h2>
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="detail-container">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content">
             <p className="text-green-accent-dark text-xl w-full">
               ในยุคดิจิทัลที่เทคโนโลยีมีบทบาทสำคัญในชีวิตประจำวัน
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="detail-container">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content">
             <p className="text-green-accent-dark text-xl w-full">
               B-Farm
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="detail-container">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content">
             <p className="text-green-accent-dark text-xl w-full">
               B-Farm
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="detail-container">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-about-2.png"
@@ -128,7 +128,7 @@ export default function Home() {
               className="detail-image"
             />
           </div>
-          <div className="detail-content md:max-w-2xl">
+          <div className="detail-content flex-1 md:max-w-2xl">
             <h2 className="text-green-accent text-5xl font-bold">
               การต่อบล๊อคที่ที่สามารถออกแบบได้ด้วยตัวเอง
             </h2>
@@ -152,7 +152,7 @@ export default function Home() {
         id="feature-section"
         className={sectionClass(featureVisible) + " bg-green-primary-dark"}
       >
-        <div className="detail-container flex-col!">
+        <div className="detail-container md:max-w-7xl flex-col!">
           <div className="detail-content text-center">
             <h2 className="text-white-primary text-4xl font-semibold">
               จุดเด่นของ B-Farm
@@ -234,8 +234,8 @@ export default function Home() {
         id="about-handysense-section"
         className={sectionClass(aboutHandySenseVisible)}
       >
-        <div className="detail-container">
-          <div className="detail-content md:max-w-2xl">
+        <div className="detail-container md:max-w-7xl md:max-w-7xl">
+          <div className="detail-content flex-1 md:max-w-2xl">
             <h2 className="text-green-accent text-5xl font-bold">
               การใช้งานร่วมกับ HandySense
             </h2>
@@ -267,7 +267,7 @@ export default function Home() {
         id="feature-section"
         className={sectionClass(feature2Visible) + " bg-green-primary-dark"}
       >
-        <div className="detail-container flex-col!">
+        <div className="detail-container md:max-w-7xl flex-col!">
           <div className="detail-content text-center">
             <h2 className="text-white-primary text-4xl font-semibold">
               คุณสมบัติ B-Farm
@@ -348,8 +348,8 @@ export default function Home() {
         id="about-handysense-section"
         className={sectionClass(exampleVisible)}
       >
-        <div className="detail-container">
-          <div className="detail-content md:max-w-2xl">
+        <div className="detail-container md:max-w-7xl">
+          <div className="detail-content flex-1 md:max-w-2xl">
             <h2 className="text-green-accent text-5xl font-bold">
               ตัวอย่างการประยุกต์ใช้งาน
               <br />

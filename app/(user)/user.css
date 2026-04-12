@@ -18,6 +18,8 @@
   --gray-primary-light: #d3cbcb;
 
   --yellow-primary: #ffd700;
+
+  --shadow-primary: rgba(0, 0, 0, 0.15);
 }
 
 .bg-white-primary {
@@ -82,6 +84,11 @@
   color: var(--gray-primary-light);
 }
 
+.divider {
+  @apply w-full mt-4 border-t;
+  border-color: var(--gray-primary-light);
+}
+
 .menu-link {
   @apply font-bold leading-6;
   color: var(--white-primary);
@@ -109,7 +116,7 @@
 }
 
 .detail-container {
-  @apply w-full flex flex-col md:flex-row items-center justify-between m-auto gap-5 md:max-w-7xl;
+  @apply w-full flex flex-col md:flex-row items-center justify-between m-auto gap-5;
 
   .detail-content {
     @apply w-full px-5 py-4 text-left;
@@ -120,7 +127,7 @@
 
     .detail-image {
       @apply w-auto h-auto min-w-80 max-w-full rounded-xl transition-all duration-500 ease-out hover:scale-105 hover:-rotate-3;
-      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 50px var(--shadow-primary);
       &.shadow-none {
         @apply shadow-none;
       }
@@ -135,5 +142,26 @@
         @apply rounded-2xl shadow-md p-6 text-center hover:-translate-y-5 hover:shadow-xl transition-all duration-400;
       }
     }
+  }
+}
+
+.card-container {
+  @apply w-full h-full p-10 rounded-lg flex flex-col items-center justify-start;
+  border: 1px solid rgba(211, 203, 203, 0.5);
+  background: var(--white-primary);
+  box-shadow: 0 4px 8px var(--shadow-primary);
+}
+
+.tutorial-menu {
+  @apply w-full p-2.5 rounded-lg;
+  background: var(--white-primary);
+  box-shadow: 1px 1px 4px var(--shadow-primary);
+  color: var(--black-primary);
+  border: 1px solid var(--gray-primary-light);
+
+  &.active {
+    color: var(--white-primary);
+    background-color: var(--green-primary);
+    border-color: var(--green-primary);
   }
 }

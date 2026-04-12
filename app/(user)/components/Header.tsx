@@ -12,10 +12,10 @@ export default function Header() {
   return (
     <header className="w-full h-16 px-4 py-2 flex items-center justify-between bg-gradient relative">
       {/* Logo */}
-      <div className="flex gap-2 items-center">
+      <Link className="flex gap-2 items-center" href="/">
         <Image src="/logo.png" alt="Logo" width={44} height={44} />
         <span className="text-2xl font-bold text-green-primary">B-Farm</span>
-      </div>
+      </Link>
       {/* Desktop Menu */}
       <nav className="hidden md:block">
         <ul className="flex gap-6">
@@ -90,6 +90,11 @@ export default function Header() {
                 target="_blank"
               >
                 ลงทะเบียน
+              </Link>
+            </li>
+            <li>
+              <Link className="menu-link" href="/partners">
+                พันธมิตร
               </Link>
             </li>
           </ul>

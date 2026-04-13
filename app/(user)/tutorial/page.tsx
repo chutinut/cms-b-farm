@@ -32,9 +32,7 @@ export default function Tutorial() {
                 <div
                   key={item.id}
                   onClick={() => setActiveVideo(item)}
-                  className={`tutorial-menu cursor-pointer ${
-                    activeVideo.id === item.id ? "active" : ""
-                  }`}
+                  className={`tutorial-menu cursor-pointer ${activeVideo.id === item.id ? "active" : ""}`}
                 >
                   {item.title}
                 </div>

@@ -17,7 +17,7 @@ export default function Tutorial() {
      ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center p-20 bg-white-primary">
+    <div className="w-full flex flex-col items-center justify-center p-0 md:p-20 bg-white-primary">
       <div className="card-container">
         <h1 className="text-green-primary text-5xl">สอนการใช้งาน B-Farm</h1>
         <hr className="divider" />
@@ -27,7 +27,7 @@ export default function Tutorial() {
           className={sectionClass(tutorialVisible)}
         >
           <div className="detail-container md:flex-row! flex-col-reverse! m-0! flex-1">
-            <div className="detail-content md:max-w-[32%] h-[calc(100vh-380px)] min-h-96 flex flex-col gap-2 px-0! overflow-y-auto">
+            <div className="detail-content md:max-w-[32%] md:h-[calc(100vh-380px)] min-h-96 flex flex-col gap-2 px-0! overflow-y-auto">
               {tutorialData.map((item) => (
                 <div
                   key={item.id}
@@ -40,12 +40,12 @@ export default function Tutorial() {
                 </div>
               ))}
             </div>
-            <div className="detail-content h-[calc(100vh-380px)] min-h-96 flex flex-col flex-1 gap-5 p-10! items-start">
+            <div className="detail-content h-fit md:h-[calc(100vh-380px)] md:min-h-96 flex flex-col flex-1 gap-5 p-0! py-5! md:p-10! items-center md:items-start">
               <h3 className="text-2xl text-black-primary">
                 {activeVideo.title}
               </h3>
               <iframe
-                className="w-full h-full min-h-80 aspect-video"
+                className="w-full h-full min-h-50 aspect-video"
                 src={`https://www.youtube.com/embed/${activeVideo.url}?autoplay=1`}
                 title={activeVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

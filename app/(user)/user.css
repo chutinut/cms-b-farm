@@ -19,6 +19,8 @@
 
   --yellow-primary: #ffd700;
 
+  --blue-primary: #305cde;
+
   --shadow-primary: rgba(0, 0, 0, 0.15);
 }
 
@@ -68,6 +70,10 @@
   color: var(--green-primary-dark);
 }
 
+.text-green-primary-light {
+  color: var(--green-primary-light);
+}
+
 .text-green-accent {
   color: var(--green-accent);
 }
@@ -84,9 +90,21 @@
   color: var(--gray-primary-light);
 }
 
+.text-blue-primary {
+  color: var(--blue-primary);
+}
+
 .divider {
   @apply w-full mt-4 border-t;
   border-color: var(--gray-primary-light);
+}
+
+.hyperlink {
+  @apply transition;
+
+  &:hover {
+    color: var(--blue-primary);
+  }
 }
 
 .menu-link {
@@ -163,5 +181,20 @@
     color: var(--white-primary);
     background-color: var(--green-primary);
     border-color: var(--green-primary);
+  }
+}
+
+.button-download {
+  @apply flex flex-row items-center justify-center gap-5 w-full md:w-fit text-xl md:text-5xl font-bold px-10 py-2 rounded-lg border-2 border-solid transition duration-500 cursor-pointer;
+  color: var(--white-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  border-color: var(--green-primary);
+  background-color: var(--green-primary);
+
+  &:hover {
+    @apply scale-110;
+    color: var(--green-primary);
+    background-color: var(--white-primary);
   }
 }

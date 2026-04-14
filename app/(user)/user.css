@@ -198,3 +198,13 @@
     background-color: var(--white-primary);
   }
 }
+
+.collapse-card {
+  @apply rounded-2xl shadow-md p-4 relative;
+  background-color: var(--white-primary);
+  border: 1px solid var(--gray-primary-light);
+
+  .toggle-button {
+    @apply absolute top-4 right-4 p-2 rounded-lg transition cursor-pointer;
+  }
+}

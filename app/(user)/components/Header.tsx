@@ -40,6 +40,11 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link className="menu-link" href="/partners">
+              พันธมิตร
+            </Link>
+          </li>
+          <li>
             <Link
               className="menu-link menu-button"
               href={registrationFormUrl}
@@ -84,17 +89,17 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link className="menu-link" href="/partners">
+                พันธมิตร
+              </Link>
+            </li>
+            <li>
               <Link
                 className="menu-link menu-button"
                 href={registrationFormUrl}
                 target="_blank"
               >
                 ลงทะเบียน
-              </Link>
-            </li>
-            <li>
-              <Link className="menu-link" href="/partners">
-                พันธมิตร
               </Link>
             </li>
           </ul>

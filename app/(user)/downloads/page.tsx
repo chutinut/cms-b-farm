@@ -196,10 +196,10 @@ export default function Downloads() {
               ศูนย์เทคโนโลยีอิเล็กทรอนิกส์และคอมพิวเตอร์แห่งชาติ
             </p>
             <div className="contact-container flex flex-col md:flex-row gap-5 py-4 flex-wrap">
-              <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg hyperlink min-w-fit">
+              <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg min-w-fit">
                 <FaPhoneAlt className="fa-icon" size={24} /> :<p>0 2564 6900</p>
               </div>
-              <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg hyperlink">
+              <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg">
                 <FaMailBulk className="fa-icon" size={24} /> :
                 <p>business@nectec.or.th</p>
               </div>

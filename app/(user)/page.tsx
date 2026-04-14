@@ -25,14 +25,14 @@ export default function Home() {
   const [exampleRef, exampleVisible] = useInView();
 
   const sectionClass = (visible: boolean) =>
-    `w-full flex flex-col items-center p-20 scroll-mt-5
+    `w-full flex flex-col items-center p-5 md:p-20 scroll-mt-5
      transition-all duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)]
      ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
 
   return (
     <div className="w-full min-h-[calc(100vh-64px)] flex flex-col items-center gap-5 bg-white-primary">
       {/* Banner */}
-      <div className="banner w-full min-h-[calc(100vh-64px)] flex flex-col justify-center items-center gap-6">
+      <div className="banner w-full min-h-[calc(100vh-64px)] flex flex-col justify-center items-center gap-6 flex-wrap p-5">
         <h1 className="text-6xl font-normal text-shadow">Welcome to B-Farm</h1>
         <h3 className="text-shadow">
           เทคโนโลยีที่ทำให้การจัดการฟาร์มง่ายขึ้น และมีประสิทธิภาพมากขึ้น
@@ -234,7 +234,7 @@ export default function Home() {
         id="about-handysense-section"
         className={sectionClass(aboutHandySenseVisible)}
       >
-        <div className="detail-container md:max-w-7xl md:max-w-7xl">
+        <div className="detail-container md:max-w-7xl">
           <div className="detail-content flex-1 md:max-w-2xl">
             <h2 className="text-green-accent text-5xl font-bold">
               การใช้งานร่วมกับ HandySense

@@ -61,7 +61,7 @@ export default function Header() {
       </button>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-green-primary text-white md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-green-primary text-white md:hidden z-1">
           <ul className="flex flex-col p-4 gap-5">
             <li>
               <Link className="menu-link" href="/">

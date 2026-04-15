@@ -1,16 +1,11 @@
 "use client";
-import { useState, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 import {
-  FaWindows,
-  FaDownload,
   FaGlobe,
   FaLine,
   FaPhoneAlt,
   FaMailBulk,
-  FaChevronDown,
   FaFacebookSquare,
 } from "react-icons/fa";
 
@@ -18,8 +13,6 @@ import { CollapseCard } from "@user/components";
 
 export default function Partners() {
   const [partnerRef, partnerVisible] = useInView();
-
-  const [open, setOpen] = useState(false);
 
   const sectionClass = (visible: boolean) =>
     `w-full flex flex-col items-center gap-2 p-5 md:p-20 scroll-mt-5

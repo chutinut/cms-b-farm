@@ -22,7 +22,7 @@ export default function Partners() {
   const [open, setOpen] = useState(false);
 
   const sectionClass = (visible: boolean) =>
-    `w-full flex flex-col items-center gap-2 p-10 scroll-mt-5
+    `w-full flex flex-col items-center gap-2 p-5 md:p-20 scroll-mt-5
      transition-all duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)]
      ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
 
@@ -38,7 +38,7 @@ export default function Partners() {
         <div className="detail-container">
           <div className="detail-content flex-1 flex flex-col justify-center items-center gap-2">
             <h1 className="text-green-primary text-5xl font-bold">พันธมิตร</h1>
-            <h3 className="text-gray-primary text-md font-semibold">
+            <h3 className="text-gray-primary text-md font-semibold text-center">
               เครือข่ายความร่วมมือเพื่อการเกษตรอัจฉริยะด้วย HandySense Pro
             </h3>
           </div>
@@ -47,10 +47,10 @@ export default function Partners() {
         {/* partner 1 */}
         <div className="detail-container items-center! md:items-start!">
           <div className="detail-content flex-1 md:max-w-5/12">
-            <h3 className="text-green-primary text-4xl font-bold">
+            <h3 className="text-green-primary text-4xl font-bold text-center md:text-left">
               รายชื่อผู้จัดจำหน่ายบอร์ด Handysense Pro
             </h3>
-            <p className="text-gray-primary text-left mt-4">
+            <p className="text-gray-primary mt-4 text-center md:text-left">
               ตัวแทนจำหน่ายอุปกรณ์ที่มีคุณภาพ และรองรับกับ B-farm
             </p>
           </div>
@@ -135,10 +135,10 @@ export default function Partners() {
         {/* Partner 2 */}
         <div className="detail-container items-center! md:items-start!">
           <div className="detail-content flex-1 md:max-w-5/12">
-            <h3 className="text-green-primary text-4xl font-bold">
+            <h3 className="text-green-primary text-4xl font-bold text-center md:text-left">
               รายชื่อ System Integrator
             </h3>
-            <p className="text-gray-primary text-left mt-4">
+            <p className="text-gray-primary mt-4 text-center md:text-left">
               ผู้วางแผนและเชื่อมโยงระบบเทคโนโลยีเกษตรอัจฉริยะให้ทำงานอย่างมีประสิทธิภาพ
             </p>
           </div>

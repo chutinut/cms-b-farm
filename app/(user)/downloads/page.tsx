@@ -15,7 +15,7 @@ export default function Downloads() {
   const [downloadRef, downloadVisible] = useInView();
 
   const sectionClass = (visible: boolean) =>
-    `w-full flex flex-col items-center gap-2 p-10 scroll-mt-5
+    `w-full flex flex-col items-center gap-2 p-5 md:p-20 scroll-mt-5
      transition-all duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)]
      ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
 
@@ -38,7 +38,7 @@ export default function Downloads() {
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-download-1.png"
-              alt=""
+              alt="b-farm-download-1"
               width={500}
               height={300}
               className="detail-image"
@@ -74,7 +74,7 @@ export default function Downloads() {
         {/* header 2 */}
         <div className="detail-container md:max-w-7xl">
           <div className="detail-content flex-1 flex flex-col justify-center items-center gap-2">
-            <h1 className="text-green-primary text-5xl font-bold">
+            <h1 className="text-green-primary text-5xl font-bold text-center">
               B-Farm Solution
             </h1>
           </div>
@@ -85,7 +85,7 @@ export default function Downloads() {
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-download-2.png"
-              alt=""
+              alt="b-farm-download-2"
               width={350}
               height={350}
               className="detail-image shadow-none"
@@ -150,10 +150,10 @@ export default function Downloads() {
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-download-3.png"
-              alt=""
+              alt="b-farm-download-3"
               width={500}
               height={500}
-              className="detail-image shadow-none"
+              className="detail-image shadow-none w-full!"
             />
           </div>
           <div className="detail-content flex-1 md:max-w-2xl">
@@ -197,7 +197,7 @@ export default function Downloads() {
             </p>
             <div className="contact-container flex flex-col md:flex-row gap-5 py-4 flex-wrap">
               <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg min-w-fit">
-                <FaPhoneAlt className="fa-icon" size={24} /> :<p>0 2564 6900</p>
+                <FaPhoneAlt className="fa-icon" size={24} /> :<p>02-564-6900</p>
               </div>
               <div className="contact-wrapper inline-flex items-center gap-2 text-gray-primary text-lg">
                 <FaMailBulk className="fa-icon" size={24} /> :
@@ -227,10 +227,10 @@ export default function Downloads() {
           <div className="detail-content flex-1 flex justify-center">
             <Image
               src="/b-farm-download-4.png"
-              alt=""
+              alt="b-farm-download-4"
               width={500}
               height={500}
-              className="detail-image"
+              className="detail-image w-full!"
             />
           </div>
           <div className="detail-content flex-1 md:max-w-2xl">

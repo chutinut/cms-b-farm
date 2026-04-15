@@ -19,15 +19,17 @@ export default function Tutorial() {
   return (
     <div className="w-full flex flex-col items-center justify-center p-0 md:p-20 bg-white-primary">
       <div className="card-container">
-        <h1 className="text-green-primary text-5xl">สอนการใช้งาน B-Farm</h1>
+        <h1 className="text-green-primary text-5xl text-center">
+          สอนการใช้งาน B-Farm
+        </h1>
         <hr className="divider" />
         <div
           ref={tutorialRef}
           id="tutorial-section"
           className={sectionClass(tutorialVisible)}
         >
-          <div className="detail-container md:flex-row! flex-col-reverse! m-0! flex-1">
-            <div className="detail-content md:max-w-[32%] md:h-[calc(100vh-380px)] min-h-96 flex flex-col gap-2 px-0! overflow-y-auto">
+          <div className="detail-container md:flex-row! flex-col-reverse! m-0! py-2 flex-1">
+            <div className="detail-content md:max-w-[32%] md:h-[calc(100vh-380px)] min-h-96 flex flex-col gap-2 p-2! overflow-y-auto md:bg-(--gray-primary)/5 md:rounded-lg">
               {tutorialData.map((item) => (
                 <div
                   key={item.id}
@@ -38,7 +40,7 @@ export default function Tutorial() {
                 </div>
               ))}
             </div>
-            <div className="detail-content h-fit md:h-[calc(100vh-380px)] md:min-h-96 flex flex-col flex-1 gap-5 p-0! py-5! md:p-10! items-center md:items-start">
+            <div className="detail-content h-fit md:h-[calc(100vh-380px)] md:min-h-96 flex flex-col flex-1 gap-5 p-2! py-5! md:p-10! items-center md:items-start">
               <h3 className="text-2xl text-black-primary">
                 {activeVideo.title}
               </h3>

@@ -35,6 +35,11 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link className="menu-link" href="/articles">
+              บทความ
+            </Link>
+          </li>
+          <li>
             <Link className="menu-link" href="/downloads">
               ดาวน์โหลด
             </Link>
@@ -91,6 +96,11 @@ export default function Header() {
             <li>
               <Link className="menu-link" href="/partners">
                 พันธมิตร
+              </Link>
+            </li>
+            <li>
+              <Link className="menu-link" href="/articles">
+                บทความ
               </Link>
             </li>
             <li>

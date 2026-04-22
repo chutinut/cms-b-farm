@@ -5,11 +5,18 @@ import Link from "next/link";
 import {
   FaFloppyDisk,
   FaChevronLeft,
+  FaChevronDown,
   FaXmark,
   FaImage,
   FaTriangleExclamation,
 } from "react-icons/fa6";
 import type { ArticleStatus } from "@/app/types/article";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 export interface ArticleFormData {
   title: string;
@@ -35,6 +42,12 @@ const ALLOWED_TYPES = [
   "image/gif",
   "image/webp",
 ];
+
+const STATUS_LABELS: Record<ArticleStatus, string> = {
+  draft: "ฉบับร่าง",
+  published: "เผยแพร่",
+  deleted: "ลบ",
+};
 
 export default function ArticleForm({
   initialData,
@@ -119,8 +132,11 @@ export default function ArticleForm({
     <>
       {/* Page Header */}
       <div className="admin-page-header">
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <Link href={backHref} className="btn btn-ghost btn-sm">
+        <div className="admin-page-header-left">
+          <Link
+            href={backHref}
+            className="btn btn-ghost btn-sm min-w-15 flex items-center justify-center min-h-9"
+          >
             <FaChevronLeft />
           </Link>
           <h2 className="admin-page-title">{pageTitle}</h2>
@@ -156,13 +172,7 @@ export default function ArticleForm({
       )}
 
       <form id="article-form" onSubmit={handleSubmit}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 300px",
-            gap: "1.5rem",
-          }}
-        >
+        <div className="admin-form-layout">
           {/* Left: Main content */}
           <div>
             <div className="admin-card">
@@ -223,25 +233,39 @@ export default function ArticleForm({
           </div>
 
           {/* Right: Sidebar */}
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
-          >
+          <div className="admin-form-sidebar">
             {/* Status */}
             <div className="admin-card">
               <div className="form-group" style={{ marginBottom: 0 }}>
                 <label htmlFor="status" className="form-label required">
                   สถานะ
                 </label>
-                <select
-                  id="status"
-                  className="form-select"
-                  value={status}
-                  onChange={(e) => setStatus(e.target.value as ArticleStatus)}
-                >
-                  <option value="draft">ฉบับร่าง</option>
-                  <option value="published">เผยแพร่</option>
-                  <option value="deleted">ลบ</option>
-                </select>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button
+                      type="button"
+                      id="status"
+                      className="form-dropdown-trigger"
+                    >
+                      {STATUS_LABELS[status]}
+                      <FaChevronDown className="admin-dropdown-chevron" />
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    align="start"
+                    className="admin-dropdown-menu"
+                  >
+                    <DropdownMenuItem onClick={() => setStatus("draft")}>
+                      ฉบับร่าง
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setStatus("published")}>
+                      เผยแพร่
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setStatus("deleted")}>
+                      ลบ
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
 

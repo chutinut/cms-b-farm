@@ -23,8 +23,8 @@ export default function AdminNav() {
     <nav className="admin-nav">
       <Link href="/admin/articles" className="admin-nav-brand">
         <Image src="/logo.png" alt="B-Farm Logo" width={36} height={36} />
-        <span>B-Farm</span>
-        <span>&nbsp;Admin</span>
+        <span className="admin-nav-brand-main">B-Farm</span>
+        <span className="admin-nav-brand-sub">&nbsp;Admin</span>
       </Link>
 
       <div className="admin-nav-links">

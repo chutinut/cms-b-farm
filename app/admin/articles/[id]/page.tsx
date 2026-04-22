@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import AdminNav from "../../../components/AdminNav";
+import AdminNav from "../../components/AdminNav";
 import ArticleForm, {
   type ArticleFormData,
-} from "../../../components/ArticleForm";
-import { getAdminArticleById, updateArticle } from "../../../lib/api";
+} from "../../components/ArticleForm";
+import { getAdminArticleById, updateArticle } from "../../lib/api";
 import type { Article } from "@/app/types/article";
 
 export default function EditArticlePage({

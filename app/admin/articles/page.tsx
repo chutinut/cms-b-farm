@@ -9,6 +9,7 @@ import {
   FaPenToSquare,
   FaTrash,
   FaNewspaper,
+  FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
   FaTriangleExclamation,
@@ -17,8 +18,15 @@ import {
 import AdminNav from "../components/AdminNav";
 import { getAdminArticles, deleteArticle } from "../lib/api";
 import type { Article } from "@/app/types/article";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const STATUS_LABELS: Record<string, string> = {
+  "": "ทุกสถานะ",
   published: "เผยแพร่",
   draft: "ฉบับร่าง",
   deleted: "ลบแล้ว",
@@ -159,16 +167,30 @@ export default function AdminArticlesPage() {
               <FaMagnifyingGlass />
               ค้นหา
             </button>
-            <select
-              className="admin-filter-select"
-              value={statusFilter}
-              onChange={(e) => handleStatusChange(e.target.value)}
-            >
-              <option value="">ทุกสถานะ</option>
-              <option value="published">เผยแพร่</option>
-              <option value="draft">ฉบับร่าง</option>
-              <option value="deleted">ลบแล้ว</option>
-            </select>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button type="button" className="admin-dropdown-trigger">
+                  {STATUS_LABELS[statusFilter]}
+                  <FaChevronDown className="admin-dropdown-chevron" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="admin-dropdown-menu">
+                <DropdownMenuItem onClick={() => handleStatusChange("")}>
+                  ทุกสถานะ
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleStatusChange("published")}
+                >
+                  เผยแพร่
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleStatusChange("draft")}>
+                  ฉบับร่าง
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleStatusChange("deleted")}>
+                  ลบแล้ว
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Table */}
@@ -222,7 +244,7 @@ export default function AdminArticlesPage() {
                             style={{ justifyContent: "center" }}
                           >
                             <Link
-                              href={`/admin/articles/${article.id}/edit`}
+                              href={`/admin/articles/${article.id}`}
                               className="btn btn-secondary btn-sm"
                               title="แก้ไข"
                             >

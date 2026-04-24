@@ -94,7 +94,7 @@ export default function ArticlesPage() {
 
   return (
     <div className="w-full min-h-[calc(100vh-64px)] bg-white-primary">
-      <div className="w-full px-5 md:px-40 pt-8 md:pt-16">
+      <div className="w-full px-5 md:px-20 pt-8 md:pt-20">
         <div className="detail-container md:max-w-7xl">
           <div className="detail-content flex-1 flex flex-col justify-center items-center gap-2 text-center">
             <h1 className="text-green-primary text-5xl font-bold">บทความ</h1>
@@ -133,7 +133,7 @@ export default function ArticlesPage() {
       </div>
 
       {/* Content */}
-      <div className="w-full mx-auto px-5 md:px-40 pb-16 pt-8">
+      <div className="w-full mx-auto px-5 md:px-20 pb-16 pt-8">
         {/* Result count */}
         {!loading && !error && (
           <p className="text-sm text-green-accent-dark mb-6">

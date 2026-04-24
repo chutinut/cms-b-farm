@@ -84,9 +84,7 @@ export default function ArticleDetailPage({
           </div>
         </div>
 
-        <hr className="divider w-11/12!" />
-
-        <div className="detail-container md:max-w-7xl items-start">
+        <div className="detail-container md:max-w-7xl flex-col! items-start">
           {article.bannerImage && (
             <div className="detail-content flex-1 flex justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -98,7 +96,7 @@ export default function ArticleDetailPage({
             </div>
           )}
 
-          <div className="detail-content flex-1 md:max-w-2xl">
+          <div className="detail-content flex-1 md:max-w-5xl">
             <div className="article-detail-header">
               <h1 className="article-detail-title">{article.title}</h1>
               <div className="article-detail-meta">

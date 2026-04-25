@@ -96,7 +96,7 @@ export default function ArticleDetailPage({
             </div>
           )}
 
-          <div className="detail-content flex-1 md:max-w-5xl">
+          <div className="detail-content flex-1">
             <div className="article-detail-header">
               <h1 className="article-detail-title">{article.title}</h1>
               <div className="article-detail-meta">

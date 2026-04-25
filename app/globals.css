@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f7f7;
+}
+
+html * {
+  font-family: Prompt, Kanit, Mitr, Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+}
+
+@layer utilities {
+  .fade-up {
+    @apply transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+
+  .fade-up-hidden {
+    @apply opacity-0 translate-y-16 scale-95;
+  }
+
+  .fade-up-show {
+    @apply opacity-100 translate-y-0 scale-100;
+  }
+}
+
+.fa-icon {
+  @apply text-xl;
+}
